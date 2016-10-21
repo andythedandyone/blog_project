@@ -1,0 +1,14 @@
+
+
+.header {
+    background-image: url("../images/liftyourself_banner_top.png");
+    height: 190px;
+}
+
+.nav {
+    height: 25px;
+    background-color: black;
+    color: darkgrey;
+    font-size: 18px;
+    font-style: normal;
+}
