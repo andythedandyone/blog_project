@@ -6,6 +6,7 @@ class blogPost(models.Model):
 
     title = models.CharField(max_length=150)
     post = models.TextField()
+    media = models.FileField(null=True, blank=True)
     date_posted = models.DateTimeField(auto_now_add=True)
     date_modfied = models.DateTimeField(auto_now=True)
 

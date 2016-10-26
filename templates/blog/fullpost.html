@@ -1,0 +1,25 @@
+{% extends "blog/header.html" %}
+{% load staticfiles %}
+
+{% block content %}
+
+    {% for object in object_list %}
+
+        <br>
+        <br>
+        <div class="row postdetail">
+
+            <div class="col-sm-12">
+            <div class="thumbnail">
+              <img src=" {{ object.media.url }}" alt="...">
+              <div class="caption">
+                <h4>{{ object.title }}</h4>
+                <p>{{ object.post | linebreaks }}</p>
+              </div>
+            </div>
+            </div>
+
+        </div>
+
+{% endfor %}
+{% endblock %}

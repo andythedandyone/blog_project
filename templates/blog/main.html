@@ -1,11 +1,106 @@
 {% extends "blog/header.html" %}
+{% load staticfiles %}
+
 
 
 {% block content %}
 
-<h2>this is the main page to come</h2>
+<br>
+    <br>
+    <div class="container-fluid maindiv">
 
-<p> {{ title }}</p>
-<p> {{ post }}</p>
+        <div class="row mother_box"">
+            {% for object in object_list %}
+
+                  <div class="col-sm-6 col-md-4">
+                    <div class="thumbnail">
+
+                        <div class="caption" style="text-align: center">
+                            <h4>{{ object.title }}</h4>
+                        </div>
+
+
+                        {% if object.media %}
+                            <img src="{{ object.media.url }}" alt="..." style="height: 200px">
+                        {% endif %}
+
+
+                        <div class="caption">
+                            <p>{{ object.post | truncatechars:"100" }}</p>
+                            <p class="pbutton"><a href="{% url 'view_post' id=object.id %}" class="btn btn-default" role="button" >Read more</a></p>
+                        </div>
+                    </div>
+                  </div>
+
+            {% endfor %}
+
+        </div>
+
+         <div class="pagination">
+            <span class="step-links">
+                {% if object_list.has_previous %}
+                    <a href="?page={{ object_list.previous_page_number }}">previous</a>
+                {% endif %}
+
+                <span class="current">
+                    Page {{ object_list.number }} of {{ object_list.paginator.num_pages }}.
+                </span>
+
+                {% if object_list.has_next %}
+                    <a href="?page={{ object_list.next_page_number }}">next</a>
+                {% endif %}
+            </span>
+        </div>
+
+    </div>
+
+
+{##}
+{#    {% cycle  '', '<div class="clearfix visible-sm">&nbsp;</div>' %}#}
+{#    {% cycle '', '', '<div class="clearfix hidden-sm hidden-xs">&nbsp;</div>'  %}#}
+
+
 
 {% endblock %}
+
+
+
+
+
+
+
+
+
+{#<h2>this is the main page to come</h2>#}
+{#    {% for object in object_list %}#}
+{#        <hr>#}
+{#        <div class="row">#}
+{#            <div class="col-sm-4">#}
+{#                <div class="row left">#}
+{#                    <div class="col-sm-6">#}
+{#                        <ti><b> {{ object.title }} </b></ti>#}
+{#                    </div>#}
+{#                    <div class="col-sm-6 right">#}
+{#                        {{ object.date_posted }}#}
+{#                    </div>#}
+{#                </div>#}
+{#                <div class="post">#}
+{#                    <p> {{ object.post }}</p>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{#    {% endfor %}#}
+{#{% endblock %}#}
+
+
+
+{#                <div class="col-sm-4 post_box">#}
+{#                    <ti><b>{{ object.title }}</b></ti>#}
+{##}
+{#                    <p><img src="{% static 'images/blur_background.jpg' %}"></p>#}
+{##}
+{##}
+{#                    <p class="post">{{ object.post }}</p>#}
+{#                </div>#}
+
+
