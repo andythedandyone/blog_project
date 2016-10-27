@@ -1,0 +1,88 @@
+/* FONTS */
+
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC|\
+                Covered+By+Your+Grace|Dancing+Script|\
+                Gloria+Hallelujah|Indie+Flower|Kaushan+Script|\
+                Lusitana|Marmelad|Mountains+of+Christmas|\
+                Nothing+You+Could+Do|Pacifico|Rock+Salt');
+
+
+
+
+
+/*font-family: 'Indie Flower', cursive;*/
+/*font-family: 'Pacifico', cursive;*/
+/*font-family: 'Dancing Script', cursive;*/
+/*font-family: 'Mountains of Christmas', cursive;*/
+/*font-family: 'Amatic SC', cursive;*/
+/*font-family: 'Gloria Hallelujah', cursive;*/
+/*font-family: 'Covered By Your Grace', cursive;*/
+/*font-family: 'Kaushan Script', cursive;*/
+/*font-family: 'Rock Salt', cursive;*/
+/*font-family: 'Nothing You Could Do', cursive;*/
+/*font-family: 'Marmelad', sans-serif;*/
+/*font-family: 'Lusitana', serif;*/
+
+
+body {
+    background-color: #fbfbfb;
+}
+
+
+.header {
+    background-image: url("../images/photo5.jpg");
+    background-color: darkblue;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 200px;
+    background-position: center;
+
+}
+
+.title {
+    text-align: center;
+    font-size: 400%;
+    vertical-align: middle;
+    color: azure;
+    line-height: 300%;
+    /*font-family: "Pacifico";*/
+    font-family: 'Rock Salt';
+}
+
+.nav {
+    height: 25px;
+    background-color: black;
+    color: darkgrey;
+    font-size: 18px;
+    font-style: normal;
+    padding-left: 5%;
+    margin: auto;
+}
+
+.maindiv {
+    margin: auto;
+    max-width: 82%;
+
+}
+
+.postdetail {
+    margin: auto;
+    max-width: 65%;
+}
+
+.pbutton {
+    text-align: right;
+}
+
+/*.thumbnail {*/
+    /*max-height: 1000px;*/
+/*}*/
+
+.caption {
+    color: aqua;
+}
+
+.pagination {
+    width: 100%;
+    text-align: center;
+}
